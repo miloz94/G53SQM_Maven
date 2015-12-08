@@ -1,0 +1,36 @@
+<project name = "jibble">
+	<target name = "clean">
+		<delete dir = "/Users/andrewchan/git/G53SQM-local/G53SQM/build"/>
+		<mkdir dir ="/Users/andrewchan/git/G53SQM-local/G53SQM/build/classes" />
+</target>
+
+
+<target name = "compile" depends = "clean">
+		<javac srcdir = "/Users/andrewchan/git/G53SQM-local/G53SQM/src"
+		destdir = "/Users/andrewchan/git/G53SQM-local/G53SQM/build/classes"
+			includeantruntime = "false"/>
+</target>
+
+<target name = "jar" depends = "compile">
+	<jar destfile = "/Users/andrewchan/git/G53SQM-local/G53SQM/build/jar/jibble.jar"
+		basedir = "/Users/andrewchan/git/G53SQM-local/G53SQM/build/classes">
+
+	<manifest>
+		<attribute name = "Main-Class" value = "g53sqm.jibble.WebServerMain"/>
+</manifest>
+</jar>
+	
+	<mkdir dir = "build/jar/webfiles" />
+	<copy todir = "build/jar/webfiles">
+	<fileset dir = "webfiles"/>
+		</copy>
+	
+
+</target>
+
+<target name = "run" depends = "jar">
+<java jar = "/Users/andrewchan/git/G53SQM-local/G53SQM/build/jar/jibble.jar" fork = "true"/>
+</target>
+
+</project>
+
