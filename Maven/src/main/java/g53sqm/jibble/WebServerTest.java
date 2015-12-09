@@ -8,7 +8,7 @@ public class WebServerTest {
 
 	@Test
 	public void testWebServer() {
-		String rootDir = "webfile";
+		String rootDir = "webfiles";
 		int port = 8088;
 		
 		assertEquals(8088,port);
