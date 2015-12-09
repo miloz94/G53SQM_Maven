@@ -48,7 +48,10 @@ public class WebServerMain {
         	Properties properties = new Properties();
         	properties.load(reader);
         	
-            System.out.println("Root Directory :" + properties.getProperty("rootDir1"));
+            System.out.println("Root Directory : " + properties.getProperty("rootDir1"));
+            System.out.println("CGI-BIN : " + properties.getProperty("CGIBINDir1"));
+            System.out.println("Port : " + properties.getProperty("port1"));
+            System.out.println("Log File : " + properties.getProperty("logFileName"));
 
         
         }catch(Exception e){
