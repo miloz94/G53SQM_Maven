@@ -16,9 +16,11 @@ $Id: WebServerMain.java,v 1.2 2004/02/01 13:37:35 pjm2 Exp $
 */
 
 import java.io.File;
-
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.URLDecoder;
+import java.util.Properties;
+
 import org.slf4j.*;
 
 /**
@@ -41,6 +43,21 @@ public class WebServerMain {
         System.out.println("Root Directory:" + file);
         System.out.println("Port:" + port);
         Logger.info("Log Information");
+        
+        try(FileReader reader = new FileReader("config")){
+        	Properties properties = new Properties();
+        	properties.load(reader);
+        	
+            System.out.println("Root Directory :" + properties.getProperty("rootDir1"));
+
+        
+        }catch(Exception e){
+        	System.out.println("Error: File not found");
+    }
+        
+        
+        
+    
         
         if (args.length > 0) {
             rootDir = args[0];
