@@ -61,10 +61,11 @@ public class RequestThread implements Runnable {
             
             
             
+            
             //Read in and store all the headers.
 
             // Specify String types of HasMap for safety - TJB
-//          HashMap headers = new HashMap();
+            //HashMap headers = new HashMap();
             HashMap <String, String> headers = new HashMap<String, String>();
             String line = null;
             while ((line = in.readLine()) != null) {
