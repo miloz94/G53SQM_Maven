@@ -33,7 +33,7 @@
   
   	<archive>
   		<manifest>
-  			<mainClass>Maven.WebServerMain</mainClass>
+  			<mainClass>g53sqm.jibble.WebServerMain</mainClass>
   		</manifest>
   	</archive>
   			<descriptorRefs>

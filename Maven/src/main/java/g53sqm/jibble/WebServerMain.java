@@ -49,11 +49,7 @@ public class WebServerMain {
         	Properties properties = new Properties();
         	properties.load(reader);
         	
-        	Scanner in = new Scanner(System.in);
-        	
-        	System.out.println("Root Directory : ");
-        	String rootDirInput = in.nextLine();
-        	properties.setProperty(rootDirInput, rootDir);
+       
         	
             System.out.println("Root Directory : " + properties.getProperty("rootDir1"));
             System.out.println("CGI-BIN : " + properties.getProperty("CGIBINDir1"));
@@ -61,7 +57,7 @@ public class WebServerMain {
             System.out.println("Log File : " + properties.getProperty("logFileName"));
         
         }catch(Exception e){
-        	System.out.println("Error: File not found");
+        	System.out.println("Error: Configuration file not found");
     }
         
         
